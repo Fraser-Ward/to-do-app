@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+
+    <h1 class="notes_header">To Do List</h1>
+
+    <main>
+        <div class="btn_container">
+            <button class="add_button" id="addBtn">+ Add To Do</button>
+            <button class="clear_button hide" id="clearBtn">Clear All</button>
+
+            <form class="form hide" id="form">
+                <label for="toDo">To Do:</label>
+                <input type="text" id="toDoInput" name="toDo" required />
+                <label for="deadline">Deadline:</label>
+                <input type="time" id="deadlineInput" name="deadline" required />
+                <label for="location">Location</label>
+                <input type="text" id="locationInput" name="location" required />
+                <button type="submit" class="submit_btn" id="submitBtn">Submit</button>
+            </form>
+        </div>
+
+        <section id="notes" class="notes">
+            <ul id="notesBody">
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

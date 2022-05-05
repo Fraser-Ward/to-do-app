@@ -1,0 +1,179 @@
+/* VARIABLES */
+:root {
+    --darkPurple: #160F29;
+    --ming: #246A73;
+    --darkCyan: #368F8B;
+    --champagne: #F3DFC1;
+    --desertSand: #DDBEA8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+/* GLOBAL STYLES */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--champagne);
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* HELPER CLASSES */
+.hide {
+    visibility: hidden;
+}
+
+
+/* GENERAL */
+main {
+    width: calc(100%-4rem);
+    height: 100%;
+}
+
+.btn_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.add_button {
+    width: 18.75rem;
+    height: 3.125rem;
+    margin-top: 1.25rem;
+    background-color: var(--darkCyan);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.add_button:hover {
+    background-color: var(--ming);
+    cursor: pointer;
+}
+
+.clear_button {
+    margin-left: 14.375rem;
+    margin-top: 0.625rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.clear_button:hover {
+    background-color: rgb(224, 1, 1);
+    cursor: pointer;
+}
+
+/* FORM */
+
+.notes_header {
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 1.25rem;
+}
+
+.form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    height: 12.5rem;
+    justify-content: space-evenly;
+    background-color: var(--darkCyan);
+    position: absolute;
+    margin-top: 4.0625rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 18.75rem;
+    z-index: 3;
+}
+
+.form * {
+    width: calc(100% - 2rem);
+    border: none;
+}
+
+label {
+    text-align: start;
+    color: white;
+}
+
+.submit_btn {
+    background-color: #36ad44;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.submit_btn:hover {
+    background-color: #3ea13f;
+    cursor: pointer;
+}
+
+/* NOTES / TO DOS */
+
+.notes {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 3rem);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 25rem;
+}
+
+li {
+    margin-bottom: 0.625rem;
+    margin-left: 2.5rem;
+    padding: 0;
+    position: relative;
+    text-transform: capitalize;
+}
+
+li:first-child {
+    margin-top: 10px;
+}
+
+
+li:hover::after {
+    content: "X";
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    font-weight: 500;
+}
